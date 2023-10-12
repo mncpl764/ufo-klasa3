@@ -18,6 +18,24 @@ public class spaceship : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
        Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
-        rb2d.AddForce(movement*speed);    
+        rb2d.AddForce(movement*speed);
+        if (Input.GetKey(KeyCode.W))
+            {
+            transform.position += new Vector3(0, 2 * Time.deltaTime, 0);
+                };
+        if (Input.GetKey(KeyCode.S))
+            {
+            transform.position += new Vector3(0, -2 * Time.deltaTime, 0);
+                };
+        if (Input.GetKey(KeyCode.D))
+            {
+              transform.position += new Vector3 (1, 0 / Time.deltaTime );
+        }
+        if (Input.GetKey(KeyCode.A))
+             {
+             transform.position += new Vector3 (-1, 0 / Time.deltaTime);
+        }
+
+
     }
 }
