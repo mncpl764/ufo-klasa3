@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class spaceship : MonoBehaviour
 {
@@ -29,13 +30,13 @@ public class spaceship : MonoBehaviour
                 };
         if (Input.GetKey(KeyCode.D))
             {
-              transform.position += new Vector3 (1, 0 / Time.deltaTime );
+              transform.position += new Vector3 (3 * Time.deltaTime, 0);
         }
         if (Input.GetKey(KeyCode.A))
              {
-             transform.position += new Vector3 (-1, 0 / Time.deltaTime);
+             transform.position += new Vector3 (-3 * Time.deltaTime, 0);
         }
-
+        
 
     }
 }
